@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio - Desarrollador de Juegos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f4f4f4; }
+        header { background: #007bff; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 10; }
+        nav { display: flex; justify-content: center; }
+        nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #ffd700; }
+        section { padding: 4rem 2rem; margin-top: 4rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .hero { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 6rem 2rem; }
+        .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; }
+        .sobre-mi { background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .portfolio { background: #f9f9f9; }
+        .portfolio h2 { text-align: center; margin-bottom: 2rem; }
+        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .project:hover { transform: translateY(-5px); }
+        .project img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .tienda { background: #e9ecef; }
+        .tienda h2 { text-align: center; margin-bottom: 2rem; }
+        .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .producto { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .producto:hover { transform: translateY(-5px); }
+        .producto img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .local-payment { background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; margin-top: 1rem; border-radius: 4px; }
+        .contacto { background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        form { display: grid; gap: 1rem; max-width: 500px; margin: auto; }
+        input, textarea { padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        button { padding: 0.75rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+        button:hover { background: #0056b3; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; }
+        @media (max-width: 768px) { .hero h2 { font-size: 2rem; } .projects, .productos { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#tienda">Tienda</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h2>Bienvenido a Mi Portfolio</h2>
+        <p>Soy un apasionado desarrollador de juegos en HTML y JavaScript. ¡Descubre mis creaciones, juega gratis y compra versiones premium!</p>
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Hola, soy vekart. Me encanta crear juegos interactivos usando tecnologías web como HTML, CSS y JavaScript. He desarrollado títulos como Fight Arena, un juego de peleas 2D, y otros proyectos divertidos. Mi objetivo es hacer juegos accesibles y entretenidos para todos. Si tienes ideas o quieres colaborar, ¡contáctame!</p>
+        <p>Skills: HTML, CSS, JavaScript, Canvas, Diseño Responsivo.</p>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200?text=Fight+Arena" alt="Fight Arena">
+                <h3>Fight Arena</h3>
+                <p>Juego de peleas 2D con 5 personajes únicos, modos Vs Bot o local, y mecánicas de combate.</p>
+                <a href="fight_arena.html" target="_blank"><button>Jugar Gratis</button></a>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200?text=Memory+Game" alt="Memory Game">
+                <h3>Juego de Memoria</h3>
+                <p>Juego de memoria con niveles progresivos, temas temáticos y dificultad creciente.</p>
+                <a href="juego_memoria.html" target="_blank"><button>Jugar Gratis</button></a>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200?text=Shooter+2D" alt="Shooter 2D">
+                <h3>Shooter 2D</h3>
+                <p>Juego de disparos con enemigos, power-ups y puntuación alta.</p>
+                <a href="shooter.html" target="_blank"><button>Jugar Gratis</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tienda" class="tienda">
+        <h2>Tienda</h2>
+        <p>Compra versiones premium de mis juegos. Para clientes de Bolivia, usa pago local con 10% de descuento exclusivo.</p>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Fight+Arena+Premium" alt="Fight Arena Premium">
+                <h3>Fight Arena - Versión Premium</h3>
+                <p>Acceso completo con personajes extra, modos ilimitados y sin anuncios.</p>
+                <p><strong>Precio normal: $5 | Con descuento local: $4.50</strong></p>
+                <!-- Pago con PayPal (Internacional) -->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="TU_EMAIL_PAYPAL">
+                    <input type="hidden" name="item_name" value="Fight Arena Premium">
+                    <input type="hidden" name="amount" value="5.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="https://tu-sitio.com/gracias">
+                    <input type="hidden" name="cancel_return" value="https://tu-sitio.com/cancelar">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                </form>
+                <!-- Pago Local -->
+                <div class="local-payment">
+                    <h4>¡Descuento Exclusivo para Bolivia!</h4>
+                    <p>Transfiere $4.50 a mi cuenta del Banco Unión. Envía comprobante por email para recibir el link.</p>
+                    <p><strong>Datos de la cuenta:</strong></p>
+                    <p>Nombre: [Tu Nombre Completo]</p>
+                    <p>Número de Cuenta: [Tu Número de Cuenta]</p>
+                    <p>Código SWIFT: BUNIBOBO</p>
+                    <p>Referencia: "Fight Arena Premium"</p>
+                    <button onclick="alert('¡Gracias! Envía el comprobante a anip7275@gmail.com para tu descarga.')">Confirmar Transferencia</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Pack+Juegos" alt="Pack Juegos">
+                <h3>Pack de Juegos Completos</h3>
+                <p>Todos mis juegos en un ZIP descargable con código fuente.</p>
+                <p><strong>Precio normal: $10 | Con descuento local: $9</strong></p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="TU_EMAIL_PAYPAL">
+                    <input type="hidden" name="item_name" value="Pack de Juegos Completos">
+                    <input type="hidden" name="amount" value="10.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="https://tu-sitio.com/gracias">
+                    <input type="hidden" name="cancel_return" value="https://tu-sitio.com/cancelar">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                </form>
+                <div class="local-payment">
+                    <h4>¡Descuento Exclusivo para Bolivia!</h4>
+                    <p>Transfiere $9 a mi cuenta del Banco Unión. Envía comprobante por email para recibir el link.</p>
+                    <p><strong>Datos de la cuenta:</strong></p>
+                    <p>Nombre: [Tu Nombre Completo]</p>
+                    <p>Número de Cuenta: [Tu Número de Cuenta]</p>
+                    <p>Código SWIFT: BUNIBOBO</p>
+                    <p>Referencia: "Pack Juegos"</p>
+                    <button onclick="alert('¡Gracias! Envía el comprobante a anip72758@gmail.com para tu descarga.')">Confirmar Transferencia</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/300x200?text=Consultoria" alt="Consultoría">
+                <h3>Consultoría Personalizada</h3>
+                <p>Te ayudo a crear tu propio juego o sitio web.</p>
+                <p><strong>Precio normal: $20 | Con descuento local: $18</strong></p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="TU_EMAIL_PAYPAL">
+                    <input type="hidden" name="item_name" value="Consultoría Personalizada">
+                    <input type="hidden" name="amount" value="20.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="https://tu-sitio.com/gracias">
+                    <input type="hidden" name="cancel_return" value="https://tu-sitio.com/cancelar">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                </form>
+                <div class="local-payment">
+                    <h4>¡Descuento Exclusivo para Bolivia!</h4>
+                    <p>Transfiere $18 a mi cuenta del Banco Unión. Envía comprobante por email para coordinar la sesión.</p>
+                    <p><strong>Datos de la cuenta:</strong></p>
+                    <p>Nombre: [Tu Nombre Completo]</p>
+                    <p>Número de Cuenta: [Tu Número de Cuenta]</p>
+                    <p>Código SWIFT: BUNIBOBO</p>
+                    <p>Referencia: "Consultoría"</p>
+                    <button onclick="alert('¡Gracias! Envía el comprobante a anip7275@gmail.com para coordinar.')">Confirmar Transferencia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes sugerencias, ideas para juegos o quieres colaborar? Envía un mensaje y lo recibiré en mi email.</p>
+        <form action="https://formspree.io/f/mpwvrlag" method="POST">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Email" required>
+            <textarea name="message" placeholder="Mensaje o Sugerencia" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Portfolio. Desarrollado con HTML, CSS y JavaScript. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Navegación suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Confirmación de envío
+        document.querySelector('form').addEventListener('submit', function(e) {
+            setTimeout(() => {
+                alert('¡Mensaje enviado! Gracias por tu sugerencia.');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
